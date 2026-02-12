@@ -6,10 +6,5 @@
 #	      Last Modified: 2026/02/12
 #==========================================
 
-peckel: peckel.c
-  gcc -o peckel.c -lx11
-
-clean:
-	rm -f peckel
-
-distclean: clean
+peckel.out: peckel.c
+  gcc -lx11 peckel.c -o peckel.out
