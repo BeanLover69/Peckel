@@ -2,9 +2,9 @@
 #include <stdbool.h>
 #include <X11/Xlib.h>
 
-int option(char *str[]);
+int option(char *str);
 
-int option(char *str[])
+int option(char *str)
 {
 	char *happy[] = '--help';
 	if (*str == *happy) {
@@ -15,7 +15,7 @@ int option(char *str[])
 
 int main(int argc, char *argv[]) {
           if (*argv[0] == '-') {
-        	    option(*argv);
+        	    option(**argv);
 	  }
   	  bool Running = true;
   	  XEvent event;
