@@ -12,7 +12,7 @@ CFLAGS=-O -Wall
 all: peckel
 
 peckel: peckel.c
-	$(CC) $(CFLAGS) -o sl sl.c -lX11
+	$(CC) $(CFLAGS) -o peckel peckel.c -lX11
 
 clean:
 	rm -f peckel
