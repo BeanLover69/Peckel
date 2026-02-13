@@ -7,4 +7,4 @@
 #==========================================
 
 peckel.out: peckel.c
-	gcc peckel.c -o peckel.out -lx11
+	gcc peckel.c -o peckel.out -lX11
