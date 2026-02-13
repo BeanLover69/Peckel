@@ -1,15 +1,12 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include <unistd.h>
-#include <curses.h>
-#include <signal.h>
 #include <X11/Xlib.h>
 
 int option(char *str);
 
 int option(char *str)
 {
-	char *happy = "-help";
+	char *happy = "--help";
 	if (*str == *happy) {
 		printf("Hello!\nThis Command is an Entertainment Tool\nand only things you can do with it is to type peckel -Emotion replace Emotion\nwith the Emotion wished for for the Character");
 		return 0;
@@ -18,9 +15,8 @@ int option(char *str)
 
 int main(int argc, char *argv[]) {
           if (*argv[0] == '-') {
-        	    option(argv[i] + 1);
+        	    option(argv[0]);
 	  }
-    	  signal(SIGINT, SIG_IGN);
   	  bool Running = true;
   	  XEvent event;
   	  Display* dis = XOpenDisplay(NULL);
