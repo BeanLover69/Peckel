@@ -22,10 +22,7 @@ int main(int argc, char *argv[]) {
         	    option(argv[i] + 1);
         	}
 	  }
-	  initscr();
     	  signal(SIGINT, SIG_IGN);
-    	  noecho();
-    	  curs_set(0);
   	  bool Running = true;
   	  XEvent event;
   	  Display* dis = XOpenDisplay(NULL);
