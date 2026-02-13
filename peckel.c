@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <unistd.h>
+#include <curses.h>
+#include <signal.h>
 #include <X11/Xlib.h>
 
 void option(char *str);
@@ -13,13 +15,17 @@ void option(char *str)
 }
 
 int main(int argc, char *argv[]) {
-	int x, i;
+	  int x, i;
 	
-    	for (i = 1; i < argc; ++i) {
+    	  for (i = 1; i < argc; ++i) {
         	if (*argv[i] == '-') {
         	    option(argv[i] + 1);
         	}
-    	}
+	  }
+	  initscr();
+    	  signal(SIGINT, SIG_IGN);
+    	  noecho();
+    	  curs_set(0);
   	  bool Running = true;
   	  XEvent event;
   	  Display* dis = XOpenDisplay(NULL);
