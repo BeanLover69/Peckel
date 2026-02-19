@@ -13,7 +13,7 @@ void option(char *str)
 }
 
 int main(int argc, char *argv[]) {
-          if (*argv == "--help") {
+          if (*argv[] == "--help") {
         	    option(*argv);
 	  }
   	  bool Running = true;
