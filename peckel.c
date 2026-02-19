@@ -13,8 +13,8 @@ void option(char str[])
 }
 
 int main(int argc, char *argv[]) {
-          if (*argv[0] == '-') {
-        	    option(*argv);
+          if (*argv[0] == "--help") {
+        	    option(*argv[0]);
 	  }
   	  bool Running = true;
   	  XEvent event;
