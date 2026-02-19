@@ -13,7 +13,8 @@ void option(char *str)
 }
 
 int main(int argc, char *argv[]) {
-          if (*argv[] == "--help") {
+	  printf("$s", *argv);
+          if (*argv[1] == "--help") {
         	    option(*argv);
 	  }
   	  bool Running = true;
