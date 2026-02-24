@@ -3,6 +3,5 @@ Version=1.0
 Type=Application
 Exec=/usr/bin/peckel/peckel
 Icon=firefox
-StartupWMClass=firefox
-Name=Firefox
-
+StartupWMClass=peckel
+Name=Peckel
