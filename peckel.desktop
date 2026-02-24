@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=/usr/bin/peckel/peckel
+Exec=peckel
+Comment=peckel a guy
 Icon=firefox
-StartupWMClass=peckel
 Name=Peckel
