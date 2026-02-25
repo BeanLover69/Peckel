@@ -14,7 +14,7 @@ int option(char *str)
 }
 
 int main(int argc, char **argv) {
-	option(**argv);
+	option(&argv);
   	bool Running = true;
   	XEvent event;
   	Display* dis = XOpenDisplay(NULL);
