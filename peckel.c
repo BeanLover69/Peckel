@@ -13,7 +13,7 @@ void option(char *str)
 	}
 }
 
-int main(int argc, char *argv) {
+int main(int argc, char **argv) {
 	option(*argv);
   	bool Running = true;
   	XEvent event;
