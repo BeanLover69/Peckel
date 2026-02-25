@@ -2,9 +2,9 @@
 #include <stdbool.h>
 #include <X11/Xlib.h>
 
-void option(char *str);
+int option(char *str);
 
-void option(char *str)
+int option(char *str)
 {
 	char *happy = "--help";
 	if (str == happy) {
