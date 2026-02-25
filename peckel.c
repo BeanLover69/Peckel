@@ -13,10 +13,6 @@ void option(char *str)
 }
 
 int main(int argc, char *argv[]) {
-	  printf("$s", *argv);
-          if (*argv[1] == "--help") {
-        	    option(*argv);
-	  }
   	  bool Running = true;
   	  XEvent event;
   	  Display* dis = XOpenDisplay(NULL);
