@@ -15,9 +15,9 @@ int option(char str[])
 }
 
 int main(int argc, char *argv[]) {
-	printf("%s", argv[0]);
+	printf("%s", argv[1]);
 	if (argc == 1) {
-		option(argv[0]);
+		option(argv[1]);
 	}
   	bool Running = true;
   	XEvent event;
