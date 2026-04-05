@@ -15,6 +15,7 @@ int option(char str[])
 }
 
 int main(int argc, char *argv[]) {
+	printf("%s", argv);
 	option(*argv);
   	bool Running = true;
   	XEvent event;
