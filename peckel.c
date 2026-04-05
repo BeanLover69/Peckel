@@ -10,15 +10,15 @@ int option(char str[])
 {
 	char happy[] = "--help";
 	if (str == happy) {
-		printf("Hello!\nThis Command is an Entertainment Tool\nand only things you can do with it is to type peckel -Emotion replace Emotion\nwith the Emotion wished for for the Character");
+		printf("Hello!\nThis Command is an Entertainment Tool\nand only things you can do with it is to type peckel -Emotion replace Emotion\nwith the Emotion wished for for the Character\n");
 		return 0;
 	}
 	return 0;
 }
 
 int main(int argc, char *argv[]) {
-	printer("lol");
-	printf("%s", argv[1]);
+	printer("lol\n");
+	printf("%s\n", argv[1]);
 	if (argc == 1) {
 		option(argv[1]);
 	}
