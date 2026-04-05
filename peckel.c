@@ -6,7 +6,7 @@
 int option(char str[])
 {
 	printf("%s\n", str);
-	if (strcmp(str, "--help")) {
+	if (strcmp(str, "--help") == 0) {
 		printf("true\n");
 		printf("Hello!\nThis Command is an Entertainment Tool\nand only things you can do with it is to type peckel -Emotion replace Emotion\nwith the Emotion wished for for the Character\n");
 		return 0;
