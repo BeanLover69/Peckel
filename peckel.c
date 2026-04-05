@@ -13,7 +13,7 @@ int option(char str[])
 }
 
 int main(int argc, char *argv[]) {
-	printf("%s\n", argv[1]);
+	printf("%d\n", argc);
 	if (argc == 2) {
 		option(argv[1]);
 	}
