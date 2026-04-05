@@ -37,7 +37,7 @@ int peckel() {
 int option(char str[])
 {
 	if (strcmp(str, "--help") == 0) {
-		printf("Usage: peckel -[hsat]\n-h: peckel happy (:\n-s: peckel sad ):\n-a: peckel angry ):<\n-t: peckel tired Zzzz");
+		printf("Usage: peckel -[hsat]\n-h: peckel happy (:\n-s: peckel sad ):\n-a: peckel angry ):<\n-t: peckel tired Zzzz\n");
 		return 0;
 	}
 	else {
