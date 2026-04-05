@@ -17,7 +17,7 @@ int option(char str[])
 }
 
 int main(int argc, char *argv[]) {
-	printf("lol");
+	printer("lol");
 	printf("%s", argv[1]);
 	if (argc == 1) {
 		option(argv[1]);
