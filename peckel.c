@@ -37,7 +37,7 @@ int peckel() {
 int option(char str[])
 {
 	if (strcmp(str, "--help") == 0) {
-		printf("Hello!\nThis Command is an Entertainment Tool\nand only things you can do with it is to type peckel -Emotion replace Emotion\nwith the Emotion wished for for the Character\n");
+		printf("Usage: peckel -[hsat]\n-h: peckel happy (:\n-s: peckel sad ):\n-a: peckel angry ):<\n-t: peckel tired Zzzz");
 		return 0;
 	}
 	else {
