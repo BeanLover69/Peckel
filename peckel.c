@@ -2,10 +2,6 @@
 #include <stdbool.h>
 #include <X11/Xlib.h>
 
-int printer(char str[]) {
-	printf(str);
-}
-
 int option(char str[])
 {
 	char happy[] = "--help";
@@ -17,9 +13,8 @@ int option(char str[])
 }
 
 int main(int argc, char *argv[]) {
-	printer("lol\n");
 	printf("%s\n", argv[1]);
-	if (argc == 1) {
+	if (argc == 2) {
 		option(argv[1]);
 	}
   	bool Running = true;
