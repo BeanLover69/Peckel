@@ -11,6 +11,7 @@ int option(char str[])
 		printf("Hello!\nThis Command is an Entertainment Tool\nand only things you can do with it is to type peckel -Emotion replace Emotion\nwith the Emotion wished for for the Character");
 		return 0;
 	}
+	return 0;
 }
 
 int main(int argc, char *argv[]) {
