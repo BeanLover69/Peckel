@@ -3,5 +3,5 @@ Version=1.0
 Type=Application
 Exec=peckel
 Comment=peckel a guy
-Icon=firefox
+Icon=/usr/share/icons/hicolor/32x32/apps/peckel.png
 Name=Peckel
