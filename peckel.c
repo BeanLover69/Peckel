@@ -22,7 +22,7 @@ int peckel() {
 	        }
 		    
 		XNextEvent(dis, &event);
-		if(event.type == Expose) {
+		if(true) {
 		        XSetForeground(dis, DefaultGC(dis, 0), WhitePixel(dis, 0));
 			XFillRectangle(dis,w,DefaultGC(dis, 0), 10, 10, 100, 100);
 			XSetForeground(dis,DefaultGC(dis, 0), col);
