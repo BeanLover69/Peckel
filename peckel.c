@@ -2,15 +2,20 @@
 #include <stdbool.h>
 #include <X11/Xlib.h>
 #include <string.h>
+#include <Imlib2.h>
 
 int peckel() {
 	bool Running = true;
 	XEvent event;
+	Imlib_Image image;
 	Display* dis = XOpenDisplay(NULL);
 	Atom delete = XInternAtom(dis, "WM_DELETE_WINDOW", False);
 	Window w = XCreateSimpleWindow(dis, XDefaultRootWindow(dis),100,100,100,100, 1, WhitePixel(dis, 0), BlackPixel(dis, 0));
+	image = imlib_load_image("peckel.png");
 	XMapWindow(dis, w);
 	unsigned long col = (100,100,100,100);
+	imlib_context_set_image(image);    // "Use this specific PNG file"
+	imlib_context_set_drawable(w); // "Draw it inside this X11 window"
 	XSetForeground(dis, DefaultGC(dis, 0), WhitePixel(dis, 0));
 	XSelectInput(dis, w, ExposureMask);
 	while(Running) {
@@ -27,6 +32,7 @@ int peckel() {
 			XFillRectangle(dis,w,DefaultGC(dis, 0), 10, 10, 100, 100);
 			XSetForeground(dis,DefaultGC(dis, 0), col);
 			XFillRectangle(dis,w,DefaultGC(dis, 0), 100,100, 190, 190);
+			imlib_render_image_on_drawable(0, 0);
 		}
 	}
 	return 0;
