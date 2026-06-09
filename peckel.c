@@ -38,7 +38,7 @@ int peckel() {
 			XFillRectangle(dis,w,DefaultGC(dis, 0), 10, 10, 100, 100);
 			XSetForeground(dis,DefaultGC(dis, 0), col);
 			XFillRectangle(dis,w,DefaultGC(dis, 0), 100,100, 190, 190);
-			imlib_render_image_on_drawable(0, 0);
+			imlib_render_image_on_drawable(500, 500);
 		}
 	}
 	return 0;
