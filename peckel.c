@@ -16,12 +16,18 @@ int peckel() {
 	unsigned long col = (100,100,100,100);
 	imlib_context_set_image(image);    // "Use this specific PNG file"
 	imlib_context_set_drawable(w); // "Draw it inside this X11 window"
+	imlib_context_set_image(image);
+	imlib_context_set_display(dis);
+    	imlib_context_set_visual(DefaultVisual(dis, DefaultScreen(dis)));
+    	imlib_context_set_colormap(DefaultColormap(dis, DefaultScreen(dis)));
+    	imlib_context_set_drawable(w);
 	XSetForeground(dis, DefaultGC(dis, 0), WhitePixel(dis, 0));
 	XSelectInput(dis, w, ExposureMask);
 	while(Running) {
 	        if (event.type == ClientMessage && event.xclient.data.l[0] == delete)
 	        {
 	        	Running = false;
+			imlib_free_image();
 	        	XDestroyWindow(dis, w);
 	        	return 0;
 	        }
