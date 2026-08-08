@@ -42,6 +42,10 @@ int paint(Display* dis, Window w, XEvent event) {
 			case 3:
 				image = imlib_load_image("/opt/peckel/peckel.png");
 				break;
+			case 4:
+				image = imlib_load_image("/opt/peckel/peckel_tired.png");
+				break;
+
 
 		}
 		imlib_context_set_image(image);    // "Use this specific PNG file"
@@ -111,6 +115,10 @@ int option(char str[])
 	}
 	else if(strcmp(str, "-s") == 0) {
 		mood = 2;
+		peckel();
+	}
+	else if(strcmp(str, "-t") == 0) {
+		mood = 4;
 		peckel();
 	}
 	else {
