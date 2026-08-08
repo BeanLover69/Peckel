@@ -62,10 +62,8 @@ int paint(Display* dis, Window w, XEvent event) {
 }
 
 int peckel() {
-	bool Running = true;
 	XEvent event;
 	unsigned long col = (100,100,100,100);
-	Imlib_Image image;
 	Display* dis = XOpenDisplay(NULL);
 	Window w = XCreateSimpleWindow(dis, XDefaultRootWindow(dis),100,100,100,100, 1, WhitePixel(dis, 0), col);
 	image = imlib_load_image("/usr/share/icons/hicolor/32x32/apps/peckel.png");
