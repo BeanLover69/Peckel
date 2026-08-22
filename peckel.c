@@ -54,11 +54,6 @@ int paint(Display* dis, Window w, XEvent event) {
     		imlib_context_set_colormap(DefaultColormap(dis, DefaultScreen(dis)));
     		imlib_context_set_drawable(w);
 		imlib_context_set_anti_alias(0);
-	        
-		XSetForeground(dis, DefaultGC(dis, 0), WhitePixel(dis, 0));
-		XFillRectangle(dis,w,DefaultGC(dis, 0), 10, 10, 100, 100);
-		XSetForeground(dis,DefaultGC(dis, 0), col);
-		XFillRectangle(dis,w,DefaultGC(dis, 0), 100,100, 190, 190);
 		imlib_render_image_on_drawable_at_size(500, 500,320,320);
 	}
 }
