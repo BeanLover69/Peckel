@@ -49,8 +49,6 @@ int paint(Display* dis, Window w, XEvent event) {
 
 		}
 		imlib_context_set_image(image);    // "Use this specific PNG file"
-		imlib_context_set_drawable(w); // "Draw it inside this X11 window"
-		imlib_context_set_image(image);
 		imlib_context_set_display(dis);
     		imlib_context_set_visual(DefaultVisual(dis, DefaultScreen(dis)));
     		imlib_context_set_colormap(DefaultColormap(dis, DefaultScreen(dis)));
